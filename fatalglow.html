@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatal Glow | Rossana Palermo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .gallery-page {
+            min-height: 100vh;
+            background: #000;
+            padding: 100px 5% 60px;
+            text-align: center;
+        }
+
+        .gallery-page h1 {
+            font-size: 3rem;
+            color: #ff007f;
+            margin-bottom: 10px;
+        }
+
+        .gallery-page p.subtitle {
+            color: #aaa;
+            font-style: italic;
+            margin-bottom: 60px;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 0, 127, 0.15);
+            transition: transform 0.4s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.01);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 12px 35px;
+            border: 2px solid #ff007f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff007f;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">Il mio CV</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <div class="gallery-page">
+        <h1>Fatal Glow</h1>
+        <p class="subtitle">Beauty that burns. 🔥</p>
+
+        <div class="gallery-grid">
+            <img src="assets/img/brand2-landing.jpg" alt="Fatal Glow Landing Page">
+            <img src="assets/img/brand2-hero.jpg" alt="Fatal Glow Hero">
+        </div>
+
+        <a href="index.html" class="back-btn">← Torna al Portfolio</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Rossana Palermo - Start2Impact Student</p>
+    </footer>
+
+</body>
+</html>

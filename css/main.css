@@ -1,0 +1,340 @@
+@charset "UTF-8";
+/* =========================================
+   ROSSANA PALERMO — PORTFOLIO
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 5%;
+  background: #000;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+.navbar .nav-links li a:hover {
+  color: #ff007f;
+}
+
+/* --- HERO --- */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  text-align: center;
+  padding: 40px 5%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.hero-logo {
+  width: 60%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.btn-main {
+  display: inline-block;
+  padding: 14px 42px;
+  border: 2px solid #ff007f;
+  color: #ff007f;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+.btn-main:hover {
+  background: #ff007f;
+  color: #fff;
+  box-shadow: 0 0 20px #ff007f;
+}
+
+/* --- PROGETTI --- */
+.projects {
+  padding: 100px 5%;
+  text-align: center;
+}
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+.projects .project-card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: 0.4s;
+}
+.projects .project-card:hover {
+  border-color: #ff007f;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 0, 127, 0.15);
+}
+.projects .project-card .img-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.projects .project-card .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s;
+}
+.projects .project-card:hover .img-container img {
+  transform: scale(1.05);
+}
+.projects .project-card .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.projects .project-card .card-content {
+  padding: 25px;
+  text-align: left;
+}
+.projects .project-card .card-content h3 {
+  color: #ff007f;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.projects .project-card .card-content p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* --- CV PAGE --- */
+.cv-page {
+  padding: 100px 10%;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+.cv-page h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.cv-section-title {
+  color: #ff007f;
+  border-bottom: 2px solid #ff007f;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.experience {
+  margin-top: 50px;
+}
+
+/* --- CONTATTI --- */
+.contact-section {
+  padding: 120px 10% 80px;
+  text-align: center;
+}
+.contact-section h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.contact-quote {
+  margin-bottom: 60px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  text-align: left;
+}
+
+.contact-info h2 {
+  color: #ff007f;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.contact-info a:hover {
+  color: #ff007f;
+}
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.contact-label {
+  color: #ff007f;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form-box {
+  background: #111;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.1);
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #000;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+  display: block;
+}
+.form-input:focus {
+  outline: none;
+  border-color: #ff007f;
+  box-shadow: 0 0 8px rgba(255, 0, 127, 0.3);
+}
+
+.btn-submit {
+  background: #ff007f;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+.btn-submit:hover {
+  background: #cc0066;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+  transform: scale(1.02);
+}
+
+/* --- UTILITY --- */
+.highlight {
+  color: #ff007f;
+}
+
+/* --- FOOTER --- */
+footer {
+  padding: 40px;
+  text-align: center;
+  color: #444;
+  border-top: 1px solid #111;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+  .navbar .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-logo {
+    width: 95%;
+  }
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+  .cv-page {
+    padding: 80px 6%;
+  }
+  .cv-page h1 {
+    font-size: 2rem;
+  }
+  .contact-section {
+    padding: 100px 6% 60px;
+  }
+  .contact-section h1 {
+    font-size: 2rem;
+  }
+  .contact-form-box {
+    padding: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-logo {
+    width: 100%;
+  }
+  .projects h2,
+  .cv-page h1,
+  .contact-section h1 {
+    font-size: 1.6rem;
+  }
+}/*# sourceMappingURL=main.css.map */
