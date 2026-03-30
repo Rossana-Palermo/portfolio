@@ -1,7 +1,5 @@
 @charset "UTF-8";
-/* =========================================
-   ROSSANA PALERMO — PORTFOLIO
-   ========================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* --- NAVBAR --- */
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -46,7 +44,7 @@ body {
   color: #ff007f;
 }
 
-/* --- HERO --- */
+
 .hero {
   height: 100vh;
   display: flex;
@@ -92,7 +90,7 @@ body {
   box-shadow: 0 0 20px #ff007f;
 }
 
-/* --- PROGETTI --- */
+
 .projects {
   padding: 100px 5%;
   text-align: center;
@@ -149,7 +147,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* --- CV PAGE --- */
+
 .cv-page {
   padding: 100px 10%;
   background: #000;
@@ -181,7 +179,7 @@ body {
   margin-top: 50px;
 }
 
-/* --- CONTATTI --- */
+
 .contact-section {
   padding: 120px 10% 80px;
   text-align: center;
@@ -278,12 +276,12 @@ body {
   transform: scale(1.02);
 }
 
-/* --- UTILITY --- */
+
 .highlight {
   color: #ff007f;
 }
 
-/* --- FOOTER --- */
+
 footer {
   padding: 40px;
   text-align: center;
@@ -291,7 +289,7 @@ footer {
   border-top: 1px solid #111;
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 5%;
