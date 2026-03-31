@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti | Rossana Palermo</title>
 
-   
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="Contatti | Rossana Palermo">
     <meta property="og:description" content="Hai un progetto in mente? Scrivimi, lavoriamo insieme!">
     <meta property="og:image" content="assets/img/logo.png">
-    <meta property="og:url" content="https://rossanapalermo.github.io/contatti.html">
+    <meta property="og:url" content="https://rossana-palermo.github.io/portfolio/contatti.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
 
@@ -22,11 +22,13 @@
 <body>
 
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cv.html">Il mio CV</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-        </ul>
+        <div class="container">
+            <ul class="nav-links d-flex gap-3 list-unstyled mb-0">
+                <li><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li><a href="cv.html" class="nav-link text-white">Il mio CV</a></li>
+                <li><a href="contatti.html" class="nav-link text-white">Contatti</a></li>
+            </ul>
+        </div>
     </nav>
 
     <section class="contact-section">
@@ -40,7 +42,7 @@
 
                 <div class="contact-item">
                     <p class="contact-label"><i class="fas fa-envelope"></i> Email</p>
-                    <a href="/cdn-cgi/l/email-protection#ddadbcb1b8afb0b2afb2aeaebcb3bceced9dbab0bcb4b1f3beb2b0"><span class="__cf_email__" data-cfemail="7b0b1a171e091614091408081a151a4a4b3b1c161a121755181416">[email&#160;protected]</span></a>
+                    <a href="mailto:palermorossana10@gmail.com">palermorossana10@gmail.com</a>
                 </div>
 
                 <div class="contact-item">
@@ -55,25 +57,76 @@
             </div>
 
             <div class="contact-form-box">
-                <form action="#" method="POST">
+                <form id="contact-form">
                     <input
                         type="text"
                         name="nome"
+                        id="nome"
                         placeholder="Il tuo Nome *"
                         required
                         class="form-input form-control mb-3">
                     <input
                         type="email"
                         name="email"
+                        id="email"
                         placeholder="La tua Email *"
                         required
                         class="form-input form-control mb-3">
                     <textarea
                         name="messaggio"
+                        id="messaggio"
                         placeholder="Raccontami il tuo progetto... *"
                         rows="4"
                         required
                         class="form-input form-control mb-3"></textarea>
-                    <button type="submit" class="btn-submit btn btn-danger w-100">Invia Richiesta</button>
+                    <button type="submit" id="btn-invia" class="btn-submit btn btn-danger w-100">Invia Richiesta</button>
+                    <p id="form-feedback" style="margin-top: 15px; text-align: center; display: none;"></p>
                 </form>
             </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rossana Palermo - Full Stack Web Developer</p>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('1YIlvLzJTo24I0Os1');
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('btn-invia');
+            const feedback = document.getElementById('form-feedback');
+            btn.textContent = 'Invio in corso...';
+            btn.disabled = true;
+
+            const params = {
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                messaggio: document.getElementById('messaggio').value
+            };
+
+            emailjs.send('service_d9e39eo', 'template_c7x6c3l', params)
+                .then(function() {
+                    feedback.textContent = '✅ Messaggio inviato! Ti risponderò presto.';
+                    feedback.style.color = '#ff007f';
+                    feedback.style.display = 'block';
+                    document.getElementById('contact-form').reset();
+                    btn.textContent = 'Invia Richiesta';
+                    btn.disabled = false;
+                }, function(error) {
+                    feedback.textContent = '❌ Qualcosa è andato storto. Riprova!';
+                    feedback.style.color = 'red';
+                    feedback.style.display = 'block';
+                    btn.textContent = 'Invia Richiesta';
+                    btn.disabled = false;
+                });
+        });
+    </script>
+
+</body>
+</html>
